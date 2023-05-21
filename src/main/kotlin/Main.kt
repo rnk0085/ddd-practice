@@ -1,7 +1,12 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import domain.User
+import domain.UserId
+import domain.UserName
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main() {
+    val userId = UserId(0)
+    val userName = UserName("rnk")
+
+    val user = User(userId, userName)
+
+    println(user)
 }
