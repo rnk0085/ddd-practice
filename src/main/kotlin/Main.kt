@@ -1,8 +1,10 @@
 import domain.*
 
 fun main() {
-    check4()
-    check5()
+    moneyCheck1()
+
+//    check4()
+//    check5()
 
 //    check2()
 //    check3()
