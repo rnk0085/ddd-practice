@@ -14,8 +14,15 @@ value class UserName(
         require(name.length >= 5) { "ユーザー名は5文字以上です" }
     }
 
-    // TODO: 値オブジェクトなので自身を変更するふるまいはNG？
-    // これって「代入」にあたるかも？
+    /**
+     * TODO: 値オブジェクトなので自身を変更するふるまいはNG？
+     * これって「代入」にあたるかも？
+     *
+     * そもそもわざわざ作る必要ない。新しくUserNameを作れば良い。
+     * val aaa = UserName("aaa")
+     * val bbb = aaa.changeUserName("bbb")
+     *  -> val bbb = UserName("bbb") で良いじゃん…。
+     */
     fun changeUserName(other: String) : UserName {
         return UserName(other)
     }
