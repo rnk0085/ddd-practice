@@ -3,10 +3,23 @@ import domain.UserId
 import domain.UserName
 
 fun main() {
-    val userId = UserId(0)
-    val userName = UserName("rnk")
+    check1()
+}
 
-    val user = User(userId, userName)
+/**
+ * UserName にルールを追加した影響を確かめる
+ */
+private fun check1() {
+    val user1 = User(
+        id = UserId(0),
+        name = UserName("rnk0085"),
+    )
 
-    println(user)
+    val user2 = User(
+        id = UserId(0),
+        name = UserName("rnk"),
+    )
+
+    println(user1) // OK
+    println(user2) // エラー：Exception in thread "main" java.lang.IllegalArgumentException: ユーザー名は5文字以上です
 }
